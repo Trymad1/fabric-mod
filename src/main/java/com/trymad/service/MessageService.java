@@ -29,7 +29,8 @@ public class MessageService {
 	}
 
 	public MessageEntity save(Message message, UUID playerId) {
-		final MessageEntity entity = new MessageEntity(playerId, message.getText());
+		if(message.getText().isEmpty()) throw new IllegalArgumentException("Message is empty");
+		final MessageEntity entity = new MessageEntity(playerId, message.getText().trim());
 		return save(entity);
 	}
 
