@@ -42,6 +42,9 @@ dependencies {
 
 	modClientImplementation include("io.github.cottonmc:LibGui:${libgui_version}")
 
+    implementation "org.hibernate.orm:hibernate-core:${hibernate_version}" 
+    implementation "org.postgresql:postgresql:${postgresql_version}"
+
 	implementation "com.google.protobuf:protobuf-java:${protobuf_version}"
 	
 }

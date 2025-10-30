@@ -1,5 +1,8 @@
 package com.trymad.network;
 
+import com.trymad.service.MessageService;
+import com.trymad.util.AsyncDatabase;
+
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.resources.ResourceLocation;
@@ -12,8 +15,9 @@ public class ServerModNetwork {
     }
 	public static final void registerGlobalReceivers() {
 		ServerPlayNetworking.registerGlobalReceiver(MessageC2SPayload.ID, (payload, context) -> {
-			final String text = payload.message().getText();
-			System.out.println(text);
+			AsyncDatabase.runAsync(() -> {
+				MessageService.getInstance().save(payload.message(), context.player().getUUID());
+			});
 		});
 	}
 
