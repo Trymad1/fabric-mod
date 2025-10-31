@@ -1,10 +1,12 @@
 # Тестовое задание Fabric mod
 <img width="1919" height="1002" alt="Screenshot_6" src="https://github.com/user-attachments/assets/0e3dd8f6-9079-4fc6-8943-5538a15c261e" />
 
+**GRADLE**: 8.14<br>
 **MINECRAFT**: 1.21.8.<br>
 **FACRIC LOADER**: 0.17.3.<br>
 **FABRIC VERSION**: 0.136.0+1.21.8.<br>
 **Маппинг**: Mojang.<br>
+
 
 ## Реализовано:
 - Окно для ввода сообщений используя LibGUI. Окно выводится при заходе в мир, открыть его снова можно на клавишу M(английскую). Изменить назначение клавиши можно в настройках;
