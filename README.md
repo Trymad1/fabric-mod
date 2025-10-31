@@ -3,15 +3,15 @@
 
 **GRADLE**: 8.14<br>
 **MINECRAFT**: 1.21.8.<br>
-**FACRIC LOADER**: 0.17.3.<br>
+**FABRIC LOADER**: 0.17.3.<br>
 **FABRIC VERSION**: 0.136.0+1.21.8.<br>
-**Маппинг**: Mojang.<br>
+**Mapping**: Mojang.<br>
 
 
 ## Реализовано:
 - Окно для ввода сообщений используя LibGUI. Окно выводится при заходе в мир, открыть его снова можно на клавишу M(английскую). Изменить назначение клавиши можно в настройках;
   - Файл описывающий интерфейс окна [TextFieldGuiDescription](src/client/java/com/trymad/screen/TextFieldGuiDescription.java);
-- Передача сообщения на серверную часть, кодируя и декодурия его при помощи Protobuf;
+- Передача сообщения на серверную часть, кодируя и декодируя его при помощи Protobuf;
   - Пакет передаваемый на сервер: [MessageC2SPayload](src/main/java/com/trymad/network/MessageC2SPayload.java);
   - Proto файл: [Message.proto](src/main/proto/Message.proto);
 - Сохранение сообщений в базу данных используя Hibernate;
